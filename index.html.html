@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio QS</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Segoe UI',sans-serif;
+  min-height:100vh;
+  background:
+    radial-gradient(circle at top left,#f5e7dc,transparent 45%),
+    radial-gradient(circle at bottom right,#eadfd6,transparent 45%),
+    linear-gradient(135deg,#efe4d9,#e7d7cc);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  color:#5b514c;
+}
+
+.card{
+  width:100%;
+  max-width:420px;
+  background:rgba(245,232,220,0.68);
+  backdrop-filter:blur(10px);
+  border-radius:28px;
+  padding:40px 28px;
+  text-align:center;
+  border:1px solid rgba(255,255,255,0.25);
+  box-shadow:0 15px 40px rgba(120,90,70,0.18);
+}
+
+.logo{
+  width:150px;
+  margin-bottom:20px;
+  animation: logoFloat 3.2s ease-in-out infinite;
+  transition: transform .35s ease, filter .35s ease;
+  filter: drop-shadow(0 10px 18px rgba(120,90,70,0.12));
+}
+
+.logo:hover{
+  transform: scale(1.05) rotate(-2deg);
+  filter: drop-shadow(0 14px 24px rgba(120,90,70,0.18));
+}
+
+@keyframes logoFloat{
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(-7px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+h1{
+  font-size:2rem;
+  color:#a07c6b;
+  margin-bottom:10px;
+}
+
+.subtitle{
+  font-size:0.95rem;
+  line-height:1.6;
+  color:#7c6a60;
+  margin-bottom:25px;
+}
+
+.services{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:30px;
+}
+
+.services span{
+  background:#f3e5db;
+  padding:8px 14px;
+  border-radius:20px;
+  font-size:0.85rem;
+  color:#8b6e60;
+  border:1px solid rgba(0,0,0,0.05);
+  transition:
+    transform .25s ease,
+    background .25s ease,
+    box-shadow .25s ease,
+    color .25s ease;
+  cursor:default;
+}
+
+.services span:hover{
+  transform: translateY(-4px) scale(1.04);
+  background:#ead8cc;
+  color:#74594d;
+  box-shadow:0 8px 18px rgba(120,90,70,0.12);
+}
+
+.buttons{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.btn{
+  text-decoration:none;
+  padding:14px;
+  border-radius:14px;
+  font-weight:600;
+  transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+
+.btn-primary{
+  background:linear-gradient(135deg,#caa999,#b89586);
+  color:white;
+}
+
+.btn-primary:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+.btn-secondary{
+  background:#f3e5db;
+  border:1px solid rgba(0,0,0,0.05);
+  color:#8b6e60;
+}
+
+.btn-secondary:hover{
+  background:#ead8cc;
+  transform:translateY(-2px);
+  box-shadow:0 10px 20px rgba(0,0,0,0.08);
+}
+
+.footer{
+  margin-top:22px;
+  font-size:0.8rem;
+  color:#8a7a70;
+}
+
+@media(max-width:480px){
+  .card{
+    padding:32px 22px;
+  }
+
+  .logo{
+    width:130px;
+  }
+}
+</style>
+</head>
+
+<body>
+  <div class="card">
+    <img src="https://i.imgur.com/85h7Hak.png" class="logo" alt="Logo Studio QS">
+
+    <h1>Studio QS</h1>
+
+    <p class="subtitle">
+      Manicure, pedicure e depilação com cuidado, delicadeza e atenção aos detalhes.
+      Agende seu horário e cuide da sua beleza.
+    </p>
+
+    <div class="services">
+      <span>Manicure</span>
+      <span>Pedicure</span>
+      <span>Depilação</span>
+    </div>
+
+    <div class="buttons">
+      <a class="btn btn-primary"
+        href="https://api.whatsapp.com/send?phone=5571988280661&text=Ol%C3%A1%2C%20tudo%20bem%3F%20Vim%20atrav%C3%A9s%20do%20Instagram."
+        target="_blank">
+        Entrar em contato
+      </a>
+
+      <a class="btn btn-secondary"
+        href="https://www.instagram.com/studio.qs"
+        target="_blank">
+        Instagram
+      </a>
+    </div>
+  </div>
+</body>
+</html>
